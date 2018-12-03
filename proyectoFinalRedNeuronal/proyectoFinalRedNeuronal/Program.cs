@@ -10,37 +10,17 @@ namespace proyectoFinalRedNeuronal
     {
         static void Main(string[] args)
         {
-            Neurona neurona = new Neurona();
+            Neurona neurona = new Neurona(2, 0.4f);
             Random r = new Random();
-
-            neurona.pesos = new float[2];
-            neurona.umbral = 0f;
 
             // ERROR = LO QUE NESESITAMOS - LO QUE TENEMOS
             // TASA DE APRENDIZAJE = 0.3f
             // PESO = PESO ANTERIOR + TASA DE APRENDIZAJE * ERROR + ENTRADA
-
-            float[] pesosAnteriores =  new float[0];
-            float umbralAnterior = -10;
-
-            float tasaAprendizaje = .3f;
-
+            
             bool sw = false;
             while (!sw)
             {
                 sw = true;
-
-                if (pesosAnteriores.Length == 0)
-                {
-                    // se les aplica el random a los pesos y al umbral
-                    neurona.pesos[0] = Convert.ToSingle(r.NextDouble() - r.NextDouble());
-                    neurona.pesos[1] = Convert.ToSingle(r.NextDouble() - r.NextDouble());
-                    neurona.umbral = Convert.ToSingle(r.NextDouble() - r.NextDouble());
-                    // Agregamos los datos anteriores
-                    pesosAnteriores = new float[2];
-                    pesosAnteriores = neurona.pesos;
-                    umbralAnterior = neurona.umbral;
-                }
 
                 Console.WriteLine("------------------------------------------");
                 Console.WriteLine("Peso1: " + neurona.pesos[0]);
@@ -53,56 +33,89 @@ namespace proyectoFinalRedNeuronal
 
                 if (neurona.salida(new float[2] { 1f, 1f }) != 1)
                 {
-                    calcularPesos(pesosAnteriores, neurona, tasaAprendizaje, umbralAnterior);
+                    neurona.aprender(new float[2] { 1f, 1f }, 1);
                     sw = false;
                 }
                 if (neurona.salida(new float[2] { 1f, 0f }) != 0)
                 {
+                    neurona.aprender(new float[2] { 1f, 0f }, 0);
                     sw = false;
                 }
                 if (neurona.salida(new float[2] { 0f, 1f }) != 0)
                 {
+                    neurona.aprender(new float[2] { 0f, 1f }, 0);
                     sw = false;
                 }
                 if (neurona.salida(new float[2] { 0f, 0f }) != 0)
                 {
+                    neurona.aprender(new float[2] { 0f, 0f }, 0);
                     sw = false;
                 }
-
-                // Se le aplica la funcion sinmoide
             }
 
             Console.ReadKey();
-        }
-
-        private static void calcularPesos(float[] pesosAnteriores, Neurona neurona, float tasaAprendizaje, float umbralAnterior)
-        {
-            if (pesosAnteriores.Length != 0)
-            {
-                // ERROR = LO QUE NESESITAMOS - LO QUE TENEMOS
-                // PESO = PESO ANTERIOR + TASA DE APRENDIZAJE * ERROR + ENTRADA
-                neurona.pesos[0] = pesosAnteriores[0] + tasaAprendizaje * (1 - neurona.salida(new float[2] { 0f, 1f })) * 1;
-                neurona.pesos[1] = pesosAnteriores[1] + tasaAprendizaje * (1 - neurona.salida(new float[2] { 0f, 1f })) * 1;
-                neurona.umbral = umbralAnterior + tasaAprendizaje * (1 - neurona.salida(new float[2] { 0f, 1f })) * 1;
-            }
-        }
-
-        float Neurona(float entrada1, float entrada2, float peso1, float peso2, float umbral)
-        {
-            // Se hace la sumatoria de las entradas con los pesos y el umbral
-            return umbral + entrada1 * peso1 + entrada2 * peso2;
-        }
-
-        float funcion(float d)
-        {
-            return d > 0 ? 1 : 0;
         }
     }
 
     public class Neurona
     {
+        float[] pesosAnteriores;
+        float umbralAnterior;
+        // PESO = PESO ANTERIOR + TASA DE APRENDIZAJE * ERROR + ENTRADA
         public float[] pesos;
         public float umbral;
+        float tasaAprendizaje;
+
+
+
+        public Neurona(int nEntradas, float tasaAprendizaje = 3.0f)
+        {
+            this.tasaAprendizaje = tasaAprendizaje;
+            pesos = new float[nEntradas];
+            pesosAnteriores = new float[nEntradas];
+            aprender();
+        }
+
+        public void aprender()
+        {
+            
+            Random r = new Random();
+            for (int i = 0; i < pesosAnteriores.Length; i++)
+            {
+                pesosAnteriores[i] = Convert.ToSingle(r.NextDouble() - r.NextDouble());
+            }
+            umbralAnterior = Convert.ToSingle(r.NextDouble() - r.NextDouble());
+
+            pesos = pesosAnteriores;
+            umbral = umbralAnterior;
+        }
+        public void aprender(float[] entradas, float salidaEsperada)
+        {
+            if (pesosAnteriores != null)
+            {
+                float error = salidaEsperada - salida(entradas);
+                for (int i = 0; i < pesos.Length; i++)
+                {
+                    pesos[i] = pesosAnteriores[i] + tasaAprendizaje * error * entradas[i];
+                }
+                umbral = umbralAnterior + tasaAprendizaje * error;
+                pesosAnteriores = pesos;
+                umbralAnterior = umbral;
+            }
+            else
+            {
+                Random r = new Random();
+                for (int i = 0; i < pesosAnteriores.Length; i++)
+                {
+                    pesosAnteriores[i] = Convert.ToSingle(r.NextDouble() - r.NextDouble());
+                }
+                umbralAnterior = Convert.ToSingle(r.NextDouble() - r.NextDouble());
+
+                pesos = pesosAnteriores;
+                umbral = umbralAnterior;
+            }
+        }
+
         public float salida(float[] entradas)
         {
             return Sigmoide(neurona(entradas));
