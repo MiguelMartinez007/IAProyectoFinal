@@ -1,12 +1,9 @@
-c:\users\mike\documents\visual studio 2013\Projects\proyectoFinalRedNeuronal\proyectoFinalRedNeuronal\bin\Debug\proyectoFinalRedNeuronal.exe.config
-C:\Users\MIKE\documents\visual studio 2013\Projects\proyectoFinalRedNeuronal\proyectoFinalRedNeuronal\bin\Debug\proyectoFinalRedNeuronal.exe
-C:\Users\MIKE\documents\visual studio 2013\Projects\proyectoFinalRedNeuronal\proyectoFinalRedNeuronal\bin\Debug\proyectoFinalRedNeuronal.pdb
-C:\Users\MIKE\documents\visual studio 2013\Projects\proyectoFinalRedNeuronal\proyectoFinalRedNeuronal\obj\Debug\proyectoFinalRedNeuronal.csprojResolveAssemblyReference.cache
-C:\Users\MIKE\documents\visual studio 2013\Projects\proyectoFinalRedNeuronal\proyectoFinalRedNeuronal\obj\Debug\proyectoFinalRedNeuronal.exe
-C:\Users\MIKE\documents\visual studio 2013\Projects\proyectoFinalRedNeuronal\proyectoFinalRedNeuronal\obj\Debug\proyectoFinalRedNeuronal.pdb
-C:\Users\MIKE\Documents\GitHub\IAProyectoFinal\proyectoFinalRedNeuronal\proyectoFinalRedNeuronal\bin\Debug\proyectoFinalRedNeuronal.exe.config
-C:\Users\MIKE\Documents\GitHub\IAProyectoFinal\proyectoFinalRedNeuronal\proyectoFinalRedNeuronal\obj\Debug\proyectoFinalRedNeuronal.exe
-C:\Users\MIKE\Documents\GitHub\IAProyectoFinal\proyectoFinalRedNeuronal\proyectoFinalRedNeuronal\obj\Debug\proyectoFinalRedNeuronal.pdb
-C:\Users\MIKE\Documents\GitHub\IAProyectoFinal\proyectoFinalRedNeuronal\proyectoFinalRedNeuronal\bin\Debug\proyectoFinalRedNeuronal.exe
-C:\Users\MIKE\Documents\GitHub\IAProyectoFinal\proyectoFinalRedNeuronal\proyectoFinalRedNeuronal\bin\Debug\proyectoFinalRedNeuronal.pdb
-C:\Users\MIKE\Documents\GitHub\IAProyectoFinal\proyectoFinalRedNeuronal\proyectoFinalRedNeuronal\obj\Debug\proyectoFinalRedNeuronal.csprojResolveAssemblyReference.cache
+c:\users\mike\documents\visual studio 2013\Projects\proyectoFinalRedneuronal\proyectoFinalRedneuronal\bin\Debug\proyectoFinalRedneuronal.exe.config
+c:\users\mike\documents\visual studio 2013\Projects\proyectoFinalRedneuronal\proyectoFinalRedneuronal\bin\Debug\proyectoFinalRedneuronal.exe
+c:\users\mike\documents\visual studio 2013\Projects\proyectoFinalRedneuronal\proyectoFinalRedneuronal\bin\Debug\proyectoFinalRedneuronal.pdb
+c:\users\mike\documents\visual studio 2013\Projects\proyectoFinalRedneuronal\proyectoFinalRedneuronal\obj\Debug\proyectoFinalRedneuronal.csprojResolveAssemblyReference.cache
+c:\users\mike\documents\visual studio 2013\Projects\proyectoFinalRedneuronal\proyectoFinalRedneuronal\obj\Debug\proyectoFinalRedneuronal.Form1.resources
+c:\users\mike\documents\visual studio 2013\Projects\proyectoFinalRedneuronal\proyectoFinalRedneuronal\obj\Debug\proyectoFinalRedneuronal.Properties.Resources.resources
+c:\users\mike\documents\visual studio 2013\Projects\proyectoFinalRedneuronal\proyectoFinalRedneuronal\obj\Debug\proyectoFinalRedneuronal.csproj.GenerateResource.Cache
+c:\users\mike\documents\visual studio 2013\Projects\proyectoFinalRedneuronal\proyectoFinalRedneuronal\obj\Debug\proyectoFinalRedneuronal.exe
+c:\users\mike\documents\visual studio 2013\Projects\proyectoFinalRedneuronal\proyectoFinalRedneuronal\obj\Debug\proyectoFinalRedneuronal.pdb
