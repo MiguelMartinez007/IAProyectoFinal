@@ -1,0 +1,9 @@
+c:\users\mike\documents\visual studio 2013\Projects\proyectoFinalRedNeuronal\proyectoFinalRedNeuronal\bin\Debug\proyectoFinalRedNeuronal.exe.config
+C:\Users\MIKE\documents\visual studio 2013\Projects\proyectoFinalRedNeuronal\proyectoFinalRedNeuronal\bin\Debug\proyectoFinalRedNeuronal.exe
+C:\Users\MIKE\documents\visual studio 2013\Projects\proyectoFinalRedNeuronal\proyectoFinalRedNeuronal\bin\Debug\proyectoFinalRedNeuronal.pdb
+C:\Users\MIKE\documents\visual studio 2013\Projects\proyectoFinalRedNeuronal\proyectoFinalRedNeuronal\obj\Debug\proyectoFinalRedNeuronal.csprojResolveAssemblyReference.cache
+C:\Users\MIKE\documents\visual studio 2013\Projects\proyectoFinalRedNeuronal\proyectoFinalRedNeuronal\obj\Debug\proyectoFinalRedNeuronal.exe
+C:\Users\MIKE\documents\visual studio 2013\Projects\proyectoFinalRedNeuronal\proyectoFinalRedNeuronal\obj\Debug\proyectoFinalRedNeuronal.pdb
+C:\Users\MIKE\Documents\GitHub\IAProyectoFinal\proyectoFinalRedNeuronal\proyectoFinalRedNeuronal\bin\Debug\proyectoFinalRedNeuronal.exe.config
+C:\Users\MIKE\Documents\GitHub\IAProyectoFinal\proyectoFinalRedNeuronal\proyectoFinalRedNeuronal\obj\Debug\proyectoFinalRedNeuronal.exe
+C:\Users\MIKE\Documents\GitHub\IAProyectoFinal\proyectoFinalRedNeuronal\proyectoFinalRedNeuronal\obj\Debug\proyectoFinalRedNeuronal.pdb
